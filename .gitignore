@@ -1,0 +1,9 @@
+# Ctags
+tags
+
+# Some scripts
+vcvars.bat
+
+# Build output directory
+build/
+
