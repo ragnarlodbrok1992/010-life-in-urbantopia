@@ -7,3 +7,5 @@ vcvars.bat
 # Build output directory
 build/
 
+# VScode stuff
+.vscode/
