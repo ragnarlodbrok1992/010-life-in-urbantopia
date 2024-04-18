@@ -1,0 +1,22 @@
+1. Overall design
+  Scene graph:
+    - Main gameplay scene
+    - City map overlay scene
+      On top of that:
+        - Player state management
+  a) Main gameplay scene
+    - 2.5D view with isometric tiles
+    - Player character moving in continuous space
+    - Player should collide with obstacles (solid objects, other entities like NPCs)
+    - TODO: Think about how to handle player interactions with stuff
+  b) City map overlay scene
+    - Something like OpenStreeMap
+    - Roads, walkable paths
+    - Buildings and place that can take player to a Main Gameplay Scene for that area
+    - Player (other players, NPCs?) avatars
+  c) Player state management
+    - Going for that excel feel
+    - Main window with player avatar, name, surname (maybe some other information, like money in wallet, on
+      bank account) and buttons to all other stuff that might be added later (inventory and stuff)
+    - TODO: we might want to have more information later in development (like info about objects in the city)
+

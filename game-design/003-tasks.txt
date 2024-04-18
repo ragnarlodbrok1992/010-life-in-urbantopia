@@ -1,0 +1,8 @@
+[ ]: Create a isotile map - renderable, in some container preferably
+  - [ ]: This entity should move around the screen (be draggable)
+[ ]: Create a player sprite
+[ ]: Add debug view of player-space - elipse around it
+[ ]: Map should be draggable (should be always follow player entity, or should be camera be free to move around?)
+[ ]: Player should move and do not fall outside of tiles and should collide with solid objects
+[ ]: Implement some solid object with defined height
+[ ]: Context menu for interaction of a player (wheel of actions maybe?)
