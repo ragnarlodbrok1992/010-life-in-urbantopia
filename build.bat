@@ -19,6 +19,7 @@ copy %sdl_dll_dir%\SDL2.dll .
   /INCREMENTAL:NO^
   /Fe:"life-in-urbantopia"^
   ../src/main.cpp^
+  ../src/entities/iso-tile.cpp^
   /I%sdl_include_dir%^
   /link /LIBPATH:%sdl_link_dir% SDL2.lib
 

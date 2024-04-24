@@ -5,29 +5,15 @@
 #include <string>
 #include <vector>
 
+#include "entities/iso-tile.hpp"
 
 // Engine state - initial message
 const std::string engineState = "Tech Demo"; // No version because of no plan
 
 // Static helper variables
 static int TILE_ID = 0;
-static vector<IsoTile*> TILES;
+static std::vector<IsoTile*> TILES;
 
-// Isometric tiles
-class IsoTile {
-    private:
-        int id; // Here is used TILE_ID as a static value to create unique id for each tile
-
-    public:
-        IsoTile(int x, int y) {
-        }
-
-        ~IsoTile() {
-        }
-
-        void draw() {
-        }
-};
 
 int main(void) {
     std::cout << "Life In Ubrantopia - " << engineState << std::endl;
@@ -73,8 +59,11 @@ int main(void) {
             }
         }
 
+        // Start of the render frame
         SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
         SDL_RenderClear(renderer); // Clear the screen (to red)
+
+        // Last frame call
         SDL_RenderPresent(renderer); // Draw to the screen
     }
 
