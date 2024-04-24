@@ -38,6 +38,12 @@ int main(void) {
         return -1;
     }
 
+    SDL_Rect rect;
+    rect.x = 10;
+    rect.y = 10;
+    rect.w = 100;
+    rect.h = 100;
+
     SDL_Event event;
     bool running = true;
     while (running) {
@@ -53,6 +59,14 @@ int main(void) {
                     case SDLK_ESCAPE:
                         running = false;
                         break;
+                    case SDLK_w:
+                        std::cout << "Up key pressed" << std::endl;
+                        rect.y -= 10;
+                        break;
+                    case SDLK_s:
+                        std::cout << "Down key pressed" << std::endl;
+                        rect.y += 10;
+                        break;
                     default:
                         break;
                 }
@@ -62,6 +76,9 @@ int main(void) {
         // Start of the render frame
         SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
         SDL_RenderClear(renderer); // Clear the screen (to red)
+
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+        SDL_RenderFillRect(renderer, &rect);
 
         // Last frame call
         SDL_RenderPresent(renderer); // Draw to the screen
